@@ -1,6 +1,7 @@
 {% extends  'main.html' %}
 {% block content %}
-   <form action="">
+    <div class="col-6 m-auto">
+        <form action="">
             {% csrf_token %}
             <select class="form-control mt-5" name="country" id="country" required>
                 <option value="">Selecione o País</option>
