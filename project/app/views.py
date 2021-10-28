@@ -31,3 +31,8 @@ def home(request):
         .sort_values(by='title',ascending=False)\
         .to_html()"""
     return render(request,'index.html',data)
+
+# Requisição para filtro de país
+def coutryFilter(request):
+    if request.body:
+        field
