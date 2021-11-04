@@ -1,7 +1,7 @@
 (function(win,doc){
     'use strict';
 
-    doc.querySelector('#country').addEventListener('change',async(event)=>{
+    doc.querySelector('.btn').addEventListener('click',async(event)=>{
         event.preventDefault();
         let req=await fetch('http://localhost:8000/countryFilter/',{
             method:'POST',
@@ -12,6 +12,7 @@
             },
             body:JSON.stringify({
                 'country':doc.querySelector('#country').value
+                'title':doc.querySelector('#title').value
             })
         });
         let res=await req.json();
