@@ -11,8 +11,9 @@
                 'X-CSRFToken':doc.querySelectorAll('input')[0].value
             },
             body:JSON.stringify({
-                'country':doc.querySelector('#country').value
-                'title':doc.querySelector('#title').value
+                'Country':doc.querySelector('#Country').value,
+                'Match':doc.querySelector('#Match').value,
+
             })
         });
         let res=await req.json();
